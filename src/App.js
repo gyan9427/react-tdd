@@ -3,10 +3,10 @@ import './App.css';
 import React from 'react';
 
 class App extends React.Component{
-  state={}
+  state={person:[]}
   render () {return (
     <div className="App">
-      <PersonList/>
+      <PersonList person={this.state.person}/>
     </div>
   );
   }
