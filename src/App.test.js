@@ -17,10 +17,12 @@ describe('App',()=>{
     const appState = appWrapper.state();
     expect(appState).not.toBeNull();
   })
+  
   it('has a people property on state',()=>{
     const appState = appWrapper.state();
     expect(appState.person).toBeDefined();
   })
+
   it('passes person property of state to personList as prop',()=>{
     const personList = appWrapper.find(PersonList);
     expect(personList.props().person).toEqual(appWrapper.state().person)

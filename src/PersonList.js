@@ -1,6 +1,9 @@
-const PersonList = () => {
+
+const PersonList = ({person=[]}) => {
     return (
-        <div></div>
+        <div>
+            <ul>{person.map((one,i) => <li key={i}>{one['firstName']}</li>)}</ul>
+        </div>
     )
 }
 
